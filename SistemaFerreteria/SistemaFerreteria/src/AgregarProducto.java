@@ -303,7 +303,7 @@ public class AgregarProducto extends javax.swing.JFrame {
          if (jTextField4.getText().length()>=20 ){
             evt.consume();
         }
-        if(!(text4.matches("0-9 [ ]"))){
+        if(!(text4.matches("[0-9]"))){
             evt.consume();
             getToolkit().beep();
         }
