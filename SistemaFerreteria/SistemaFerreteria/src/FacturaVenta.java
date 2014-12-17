@@ -373,7 +373,7 @@ public class FacturaVenta extends javax.swing.JFrame {
             evt.consume();
             getToolkit().beep();
         }
-        if(!(text1.matches("a-zA-Z"))){
+        if(!(text1.matches("[0-9,-]"))){
             evt.consume();
             getToolkit().beep();
         }
@@ -397,7 +397,7 @@ public class FacturaVenta extends javax.swing.JFrame {
             evt.consume();
             getToolkit().beep();
         }
-        if(!(text3.matches("0-9"))){
+        if(!(text3.matches("[0-9]"))){
             evt.consume();
             getToolkit().beep();
         }
