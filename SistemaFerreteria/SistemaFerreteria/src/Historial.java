@@ -125,7 +125,7 @@ public class Historial extends javax.swing.JFrame {
             evt.consume();
             getToolkit().beep();
         }
-        if(!(text1.matches("[a-zA-Z]"))){
+        if(!(text1.matches("[a-z,A-Z]"))){
             evt.consume();
             getToolkit().beep();
         }
