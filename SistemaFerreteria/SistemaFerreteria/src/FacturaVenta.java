@@ -376,6 +376,8 @@ public class FacturaVenta extends javax.swing.JFrame {
         if(!(text1.matches("[0-9,-]"))){
             evt.consume();
             getToolkit().beep();
+            jTextField1.setToolTipText("Ingrese solamente datos numericos con el caracter - antes de su numero de cedula");
+        
         }
     }//GEN-LAST:event_jTextField1KeyTyped
 
