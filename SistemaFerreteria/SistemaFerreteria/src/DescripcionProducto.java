@@ -1,3 +1,8 @@
+
+import java.awt.Component;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,9 +20,9 @@ public class DescripcionProducto extends javax.swing.JFrame {
      */
     public DescripcionProducto() {
         initComponents();
-        this.jComboBox1.addItem("Plomeria");
-        this.jComboBox1.addItem("Hogar");
-        this.jComboBox1.addItem("moateriales");
+        this.cbAgregarTipo.addItem("Plomeria");
+        this.cbAgregarTipo.addItem("Hogar");
+        this.cbAgregarTipo.addItem("moateriales");
     }
 
     /**
@@ -29,291 +34,304 @@ public class DescripcionProducto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        descripcion = new javax.swing.JTextArea();
-        nombre = new javax.swing.JTextField();
-        costo = new javax.swing.JTextField();
-        proveedor = new javax.swing.JTextField();
-        stock = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
+        pnDescripcionProducto = new javax.swing.JPanel();
+        lbNombre = new javax.swing.JLabel();
+        txtAgregarNombre = new javax.swing.JTextField();
+        lbCosto = new javax.swing.JLabel();
+        txtAgregarCosto = new javax.swing.JTextField();
+        lbTipo = new javax.swing.JLabel();
+        cbAgregarTipo = new javax.swing.JComboBox();
+        lbProveedor = new javax.swing.JLabel();
+        txtAgregarProveedor = new javax.swing.JTextField();
+        lbStock = new javax.swing.JLabel();
+        txtAgregarStock = new javax.swing.JTextField();
+        lbDescripcion = new javax.swing.JLabel();
+        btnGuardar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
+        btnAtras = new javax.swing.JButton();
+        txtAgregarDescripcion = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(640, 640));
+        setName(""); // NOI18N
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("Nombre:");
+        pnDescripcionProducto.setAutoscrolls(true);
+        pnDescripcionProducto.setPreferredSize(new java.awt.Dimension(1204, 1204));
 
-        jLabel2.setText("Costo:");
+        lbNombre.setText("Nombre");
+        lbNombre.setName("NOMBRE"); // NOI18N
 
-        jLabel3.setText("Tipo:");
-
-        jLabel4.setText("Proveedor:");
-
-        jLabel5.setText("Stock:");
-
-        jLabel6.setText("Descripción:");
-
-        descripcion.setColumns(20);
-        descripcion.setRows(5);
-        descripcion.setEnabled(false);
-        descripcion.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtAgregarNombre.setEnabled(false);
+        txtAgregarNombre.setName("nombre"); // NOI18N
+        txtAgregarNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                descripcionKeyTyped(evt);
+                txtAgregarNombreKeyTyped(evt);
             }
         });
-        jScrollPane1.setViewportView(descripcion);
 
-        nombre.setEnabled(false);
-        nombre.addKeyListener(new java.awt.event.KeyAdapter() {
+        lbCosto.setText("Costo");
+        lbCosto.setName("COSTO"); // NOI18N
+
+        txtAgregarCosto.setEnabled(false);
+        txtAgregarCosto.setName("costo"); // NOI18N
+        txtAgregarCosto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgregarCostoActionPerformed(evt);
+            }
+        });
+        txtAgregarCosto.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                nombreKeyTyped(evt);
+                txtAgregarCostoKeyTyped(evt);
             }
         });
 
-        costo.setEnabled(false);
-        costo.addKeyListener(new java.awt.event.KeyAdapter() {
+        lbTipo.setText("Tipo");
+        lbTipo.setName("TIPO"); // NOI18N
+
+        cbAgregarTipo.setEnabled(false);
+        cbAgregarTipo.setName("tipo"); // NOI18N
+
+        lbProveedor.setText("Proveedor");
+        lbProveedor.setName("PROVEEDOR"); // NOI18N
+
+        txtAgregarProveedor.setEnabled(false);
+        txtAgregarProveedor.setName("proveedor"); // NOI18N
+        txtAgregarProveedor.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                costoKeyTyped(evt);
+                txtAgregarProveedorKeyTyped(evt);
             }
         });
 
-        proveedor.setEnabled(false);
-        proveedor.addKeyListener(new java.awt.event.KeyAdapter() {
+        lbStock.setText("Stock");
+        lbStock.setName("STOCK"); // NOI18N
+
+        txtAgregarStock.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtAgregarStock.setEnabled(false);
+        txtAgregarStock.setName("stock"); // NOI18N
+        txtAgregarStock.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                proveedorKeyTyped(evt);
+                txtAgregarStockKeyTyped(evt);
             }
         });
 
-        stock.setEnabled(false);
-        stock.addKeyListener(new java.awt.event.KeyAdapter() {
+        lbDescripcion.setText("Descripcion");
+        lbDescripcion.setName("DESCRIPCION"); // NOI18N
+
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+
+        btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+
+        btnAtras.setText("Atras");
+
+        txtAgregarDescripcion.setEnabled(false);
+        txtAgregarDescripcion.setName("Descripcion"); // NOI18N
+        txtAgregarDescripcion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                stockKeyTyped(evt);
+                txtAgregarDescripcionKeyTyped(evt);
             }
         });
 
-        jButton1.setText("Modificar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Modificar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Modificar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setText("Modificar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        jButton6.setText("Modificar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        jButton7.setText("Guardar cambios");
-
-        jButton8.setText("Atrás");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nombre)
-                            .addComponent(costo)
-                            .addComponent(proveedor)
-                            .addComponent(stock)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton8)))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addContainerGap(47, Short.MAX_VALUE))
+        javax.swing.GroupLayout pnDescripcionProductoLayout = new javax.swing.GroupLayout(pnDescripcionProducto);
+        pnDescripcionProducto.setLayout(pnDescripcionProductoLayout);
+        pnDescripcionProductoLayout.setHorizontalGroup(
+            pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnDescripcionProductoLayout.createSequentialGroup()
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbNombre)
+                            .addComponent(lbCosto)
+                            .addComponent(lbTipo)
+                            .addComponent(lbProveedor)
+                            .addComponent(lbStock)
+                            .addComponent(lbDescripcion))
+                        .addGap(89, 89, 89)
+                        .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtAgregarNombre)
+                                    .addComponent(txtAgregarCosto)
+                                    .addComponent(cbAgregarTipo, 0, 219, Short.MAX_VALUE)
+                                    .addComponent(txtAgregarProveedor)
+                                    .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                                        .addComponent(txtAgregarStock)
+                                        .addGap(106, 106, 106)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtAgregarDescripcion)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnDescripcionProductoLayout.createSequentialGroup()
+                        .addContainerGap(115, Short.MAX_VALUE)
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(59, 59, 59))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+        pnDescripcionProductoLayout.setVerticalGroup(
+            pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbNombre)
+                    .addComponent(txtAgregarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(costo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(stock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbCosto)
+                    .addComponent(txtAgregarCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipo)
+                    .addComponent(cbAgregarTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbProveedor)
+                    .addComponent(txtAgregarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbStock)
+                    .addComponent(txtAgregarStock))
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jButton6)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8))
-                .addContainerGap(56, Short.MAX_VALUE))
+                        .addComponent(lbDescripcion))
+                    .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(txtAgregarDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGuardar)
+                    .addComponent(btnModificar)
+                    .addComponent(btnAtras))
+                .addGap(64, 64, 64))
         );
+
+        lbNombre.getAccessibleContext().setAccessibleName("");
+        txtAgregarNombre.getAccessibleContext().setAccessibleName("descripcion");
+
+        getContentPane().add(pnDescripcionProducto);
+        pnDescripcionProducto.setBounds(0, 0, 530, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        nombre.setEnabled(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void txtAgregarCostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgregarCostoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgregarCostoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        costo.setEnabled(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+        //Esta validacion lo que hace sencillamente es que al momento de guardar reconocer de manera inmediata que caja de texto esta vacia
+        //si es asi entonces presenta una advertencia que debe ser llenada
+        Component[] componentes=pnDescripcionProducto.getComponents();
+        int i;
+        
+          for(i=1;i<componentes.length;i++)
+          {
+              System.out.print(componentes[i].getName());
+              if(componentes[i] instanceof JTextField)
+              {
+                if(((JTextField)componentes[i]).getText().equals(""))
+                {
+                 JOptionPane.showMessageDialog(componentes[i],"Espacios en blanco:::"+componentes[i].getName());
+                }
+              }
+          }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        proveedor.setEnabled(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // TODO add your handling code here:
+        //El diseño anterior ocupaba muchos recursos en cuanto al uso de botones innecesarios haciendo un recorrido al jpane y un cast 
+          //validamos n componentes      
+        Component[] componentes=pnDescripcionProducto.getComponents();
+        int i;
+        cbAgregarTipo.setEnabled(true);
+        for(i=1;i<componentes.length;i++)
+          {
+              System.out.print(componentes[i].getName());
+              if(componentes[i] instanceof JTextField)
+              {
+                ((JTextField)componentes[i]).setEnabled(true);
+              }
+          }
+        
+    }//GEN-LAST:event_btnModificarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       stock.setEnabled(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        descripcion.setEnabled(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        TablaProductos table = new TablaProductos();
-        table.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void nombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreKeyTyped
-       String text1=String.valueOf(evt.getKeyChar());
-       if(nombre.getText().length()>=20){
-           evt.consume();
-           getToolkit().beep();
-       }
-       if(!(text1.matches("[a-zA-Z]"))){
-           evt.consume();
-           getToolkit().beep();
-       }
-    }//GEN-LAST:event_nombreKeyTyped
-
-    private void costoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_costoKeyTyped
-        String text2=String.valueOf(evt.getKeyChar());
-        if(costo.getText().length()>=20){
+    private void txtAgregarNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarNombreKeyTyped
+        // TODO add your handling code here:
+        String cadena=String.valueOf(evt.getKeyChar());
+        if(txtAgregarNombre.getText().length()>=35)
+        {
             evt.consume();
-            getToolkit().beep();
         }
-        if(!(text2.matches("[0-9]"))){
+        if(!cadena.matches("[A-Z|a-z|\\s]"))
+        {
             evt.consume();
-            getToolkit().beep();
-        }
-    }//GEN-LAST:event_costoKeyTyped
+        } 
+    }//GEN-LAST:event_txtAgregarNombreKeyTyped
 
-    private void proveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_proveedorKeyTyped
-        String text3=String.valueOf(evt.getKeyChar());
-        if(proveedor.getText().length()>=20){
+    private void txtAgregarCostoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarCostoKeyTyped
+        // TODO add your handling code here:
+          String cadena=String.valueOf(evt.getKeyChar());
+        if(txtAgregarCosto.getText().length()>=6)
+        {
             evt.consume();
-            getToolkit().beep();
         }
-        if(!(text3.matches("[a-zA-Z]"))){
+        if(!cadena.matches("[0-9]"))
+        {
             evt.consume();
-            getToolkit().beep();
-        }
-    }//GEN-LAST:event_proveedorKeyTyped
+        } 
+    }//GEN-LAST:event_txtAgregarCostoKeyTyped
 
-    private void descripcionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_descripcionKeyTyped
-       /*String text5=String.valueOf(evt.getKeyChar());
-        if(descripcion.getText().length()>=100){
+    private void txtAgregarProveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarProveedorKeyTyped
+        // TODO add your handling code here:
+         String cadena=String.valueOf(evt.getKeyChar());
+        if(txtAgregarProveedor.getText().length()>=35)
+        {
             evt.consume();
-            getToolkit().beep();
         }
-        if(!(text5.matches("[0-9a-zA-Z#&_-.,@]"))){
+        if(!cadena.matches("[A-Z|a-z|\\s]"))
+        {
             evt.consume();
-            getToolkit().beep();
-        }*/
-    }//GEN-LAST:event_descripcionKeyTyped
+        } 
+    }//GEN-LAST:event_txtAgregarProveedorKeyTyped
 
-    private void stockKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_stockKeyTyped
-        String text4=String.valueOf(evt.getKeyChar());
-        if(stock.getText().length()>=20){
+    private void txtAgregarStockKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarStockKeyTyped
+        // TODO add your handling code here:
+           String cadena=String.valueOf(evt.getKeyChar());
+        if(txtAgregarStock.getText().length()>=6)
+        {
             evt.consume();
-            getToolkit().beep();
         }
-        if(!(text4.matches("[a-zA-Z]"))){
+        if(!cadena.matches("[0-9]"))
+        {
             evt.consume();
-            getToolkit().beep();
+        } 
+    }//GEN-LAST:event_txtAgregarStockKeyTyped
+
+    private void txtAgregarDescripcionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarDescripcionKeyTyped
+        // TODO add your handling code here:
+         String cadena=String.valueOf(evt.getKeyChar());
+        if(txtAgregarDescripcion.getText().length()>=150)
+        {
+            evt.consume();
         }
-    }//GEN-LAST:event_stockKeyTyped
+        if(!cadena.matches("[A-Z|a-z|\\s]"))
+        {
+            evt.consume();
+        } 
+    }//GEN-LAST:event_txtAgregarDescripcionKeyTyped
 
     /**
      * @param args the command line arguments
@@ -344,6 +362,7 @@ public class DescripcionProducto extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new DescripcionProducto().setVisible(true);
             }
@@ -351,25 +370,21 @@ public class DescripcionProducto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField costo;
-    private javax.swing.JTextArea descripcion;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nombre;
-    private javax.swing.JTextField proveedor;
-    private javax.swing.JTextField stock;
+    private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnModificar;
+    private javax.swing.JComboBox cbAgregarTipo;
+    private javax.swing.JLabel lbCosto;
+    private javax.swing.JLabel lbDescripcion;
+    private javax.swing.JLabel lbNombre;
+    private javax.swing.JLabel lbProveedor;
+    private javax.swing.JLabel lbStock;
+    private javax.swing.JLabel lbTipo;
+    private javax.swing.JPanel pnDescripcionProducto;
+    private javax.swing.JTextField txtAgregarCosto;
+    private javax.swing.JTextField txtAgregarDescripcion;
+    private javax.swing.JTextField txtAgregarNombre;
+    private javax.swing.JTextField txtAgregarProveedor;
+    private javax.swing.JTextField txtAgregarStock;
     // End of variables declaration//GEN-END:variables
 }
