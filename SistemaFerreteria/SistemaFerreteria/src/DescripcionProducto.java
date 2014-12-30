@@ -159,16 +159,14 @@ public class DescripcionProducto extends javax.swing.JFrame {
                             .addComponent(lbDescripcion))
                         .addGap(89, 89, 89)
                         .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
-                                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtAgregarNombre)
-                                    .addComponent(txtAgregarCosto)
-                                    .addComponent(cbAgregarTipo, 0, 219, Short.MAX_VALUE)
-                                    .addComponent(txtAgregarProveedor)
-                                    .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
-                                        .addComponent(txtAgregarStock)
-                                        .addGap(106, 106, 106)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtAgregarNombre)
+                                .addComponent(txtAgregarCosto)
+                                .addComponent(cbAgregarTipo, 0, 219, Short.MAX_VALUE)
+                                .addComponent(txtAgregarProveedor)
+                                .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                                    .addComponent(txtAgregarStock)
+                                    .addGap(106, 106, 106)))
                             .addComponent(txtAgregarDescripcion)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnDescripcionProductoLayout.createSequentialGroup()
                         .addContainerGap(115, Short.MAX_VALUE)
@@ -239,6 +237,7 @@ public class DescripcionProducto extends javax.swing.JFrame {
         
           for(i=1;i<componentes.length;i++)
           {
+              //DEbug
               System.out.print(componentes[i].getName());
               if(componentes[i] instanceof JTextField)
               {
@@ -283,15 +282,20 @@ public class DescripcionProducto extends javax.swing.JFrame {
 
     private void txtAgregarCostoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarCostoKeyTyped
         // TODO add your handling code here:
-          String cadena=String.valueOf(evt.getKeyChar());
-        if(txtAgregarCosto.getText().length()>=6)
+        int c=0;  
+        String cadena=String.valueOf(evt.getKeyChar());
+        if(txtAgregarCosto.getText().length()>=7)
         {
             evt.consume();
         }
         if(!cadena.matches("[0-9]"))
         {
-            evt.consume();
-        } 
+            
+           
+             evt.consume(); 
+              
+        }
+        
     }//GEN-LAST:event_txtAgregarCostoKeyTyped
 
     private void txtAgregarProveedorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAgregarProveedorKeyTyped

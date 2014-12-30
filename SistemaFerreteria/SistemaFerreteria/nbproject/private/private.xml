@@ -3,15 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/AgregarProducto.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/TablaProductos.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/VentanaPrincipal.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/FacturaVenta.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/SistemaFerreteria.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/Historial.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/Reporte.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/DescripcionProducto.java</file>
-            <file>file:/C:/Users/Luis%20Andrade/Documents/NetBeansProjects/SistemaFerreteria/SistemaFerreteria/src/FacturaCompra.java</file>
+            <file>file:/home/kevin/BaseDeDatosFerreteria/SistemaFerreteria/SistemaFerreteria/src/Historial.java</file>
+            <file>file:/home/kevin/BaseDeDatosFerreteria/SistemaFerreteria/SistemaFerreteria/src/DescripcionProducto.java</file>
+            <file>file:/home/kevin/BaseDeDatosFerreteria/SistemaFerreteria/SistemaFerreteria/src/TablaProductos.java</file>
+            <file>file:/home/kevin/BaseDeDatosFerreteria/SistemaFerreteria/SistemaFerreteria/src/FacturaVenta.java</file>
         </group>
     </open-files>
 </project-private>
