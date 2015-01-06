@@ -47,7 +47,6 @@ public class FacturaVenta extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jdFecha = new com.toedter.calendar.JDateChooser();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtidentidadcliente = new javax.swing.JTextField();
@@ -68,13 +67,14 @@ public class FacturaVenta extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         imageLbl = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jLabel1.setText("No Factura:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(330, 170, 80, 22);
+        jLabel1.setBounds(330, 170, 57, 22);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -100,7 +100,7 @@ public class FacturaVenta extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(430, 160, 114, 48);
+        jPanel1.setBounds(430, 160, 114, 46);
 
         jLabel3.setFont(new java.awt.Font("Lucida Calligraphy", 2, 18)); // NOI18N
         jLabel3.setText("Ferretería S.A");
@@ -109,31 +109,23 @@ public class FacturaVenta extends javax.swing.JFrame {
 
         jLabel4.setText("Dirección:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(140, 100, 70, 18);
+        jLabel4.setBounds(140, 100, 47, 14);
 
         jLabel5.setText("Florida Norte, Mz:202, Villa:14");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(230, 100, 201, 18);
+        jLabel5.setBounds(230, 100, 145, 14);
 
         jLabel8.setText("Fecha:");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(30, 160, 46, 18);
-
-        jdFecha.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jdFechaKeyTyped(evt);
-            }
-        });
-        getContentPane().add(jdFecha);
-        jdFecha.setBounds(100, 150, 154, 28);
+        jLabel8.setBounds(30, 160, 33, 14);
 
         jLabel9.setText("C.I cliente:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(20, 210, 72, 18);
+        jLabel9.setBounds(20, 210, 53, 14);
 
         jLabel10.setText("Dirección:");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(20, 260, 70, 18);
+        jLabel10.setBounds(20, 260, 47, 14);
 
         txtidentidadcliente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -141,7 +133,7 @@ public class FacturaVenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtidentidadcliente);
-        txtidentidadcliente.setBounds(100, 200, 181, 28);
+        txtidentidadcliente.setBounds(100, 200, 181, 20);
 
         txtDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -149,11 +141,11 @@ public class FacturaVenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtDireccion);
-        txtDireccion.setBounds(100, 250, 181, 28);
+        txtDireccion.setBounds(100, 250, 181, 20);
 
         jLabel11.setText("Teléfono:");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(20, 310, 68, 18);
+        jLabel11.setBounds(20, 310, 46, 14);
 
         txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -161,7 +153,7 @@ public class FacturaVenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtTelefono);
-        txtTelefono.setBounds(100, 300, 181, 28);
+        txtTelefono.setBounds(100, 300, 181, 20);
 
         tablaFactura.setAutoCreateRowSorter(true);
         tablaFactura.setModel(new javax.swing.table.DefaultTableModel(
@@ -185,11 +177,11 @@ public class FacturaVenta extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setText("Detalle");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(30, 360, 63, 22);
+        jLabel12.setBounds(30, 360, 53, 22);
 
         jLabel13.setText("Total:");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(300, 510, 40, 18);
+        jLabel13.setBounds(300, 510, 28, 14);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -213,7 +205,7 @@ public class FacturaVenta extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(400, 500, 120, 40);
+        jPanel2.setBounds(400, 500, 116, 38);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -254,7 +246,7 @@ public class FacturaVenta extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(340, 220, 205, 93);
+        jPanel3.setBounds(340, 220, 200, 92);
 
         jButton1.setText("Imprimir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -263,7 +255,7 @@ public class FacturaVenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 500, 68, 30);
+        jButton1.setBounds(30, 500, 71, 23);
 
         jButton2.setText("Volver");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -272,7 +264,7 @@ public class FacturaVenta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(150, 500, 56, 30);
+        jButton2.setBounds(150, 500, 63, 23);
 
         imageLbl.setToolTipText("");
         imageLbl.setMaximumSize(new java.awt.Dimension(195, 259));
@@ -299,7 +291,9 @@ public class FacturaVenta extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(10, 0, 124, 124);
+        jPanel4.setBounds(10, 0, 120, 122);
+        getContentPane().add(jDateChooser1);
+        jDateChooser1.setBounds(100, 160, 87, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -397,6 +391,7 @@ public class FacturaVenta extends javax.swing.JFrame {
     private javax.swing.JLabel imageLbl;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -417,7 +412,6 @@ public class FacturaVenta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private com.toedter.calendar.JDateChooser jdFecha;
     private javax.swing.JTable tablaFactura;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtTelefono;
