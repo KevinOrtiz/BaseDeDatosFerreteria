@@ -67,7 +67,6 @@ public class FacturaVenta extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         imageLbl = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -292,8 +291,6 @@ public class FacturaVenta extends javax.swing.JFrame {
 
         getContentPane().add(jPanel4);
         jPanel4.setBounds(10, 0, 120, 122);
-        getContentPane().add(jDateChooser1);
-        jDateChooser1.setBounds(100, 160, 87, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -391,7 +388,6 @@ public class FacturaVenta extends javax.swing.JFrame {
     private javax.swing.JLabel imageLbl;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
