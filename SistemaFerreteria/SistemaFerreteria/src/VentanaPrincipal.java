@@ -8,6 +8,10 @@
  *
  * @author lk
  */
+import BaseDeDatos.ConectarBaseDeDatos;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
@@ -163,7 +167,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
-        System.exit(0);
+        
+            System.exit(0);
+      
+        
     }//GEN-LAST:event_btnSalir1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -213,8 +220,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
+                
                 new VentanaPrincipal().setVisible(true);
+                 ConectarBaseDeDatos coneccion = new ConectarBaseDeDatos();
+                 coneccion.acceder();
             }
         });
     }
