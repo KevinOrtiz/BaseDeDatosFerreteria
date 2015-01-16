@@ -50,6 +50,7 @@ public class DescripcionProducto extends javax.swing.JFrame {
         btnModificar = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
         txtAgregarDescripcion = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(640, 640));
@@ -133,6 +134,11 @@ public class DescripcionProducto extends javax.swing.JFrame {
         });
 
         btnAtras.setText("Atras");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
 
         txtAgregarDescripcion.setEnabled(false);
         txtAgregarDescripcion.setName("Descripcion"); // NOI18N
@@ -141,6 +147,9 @@ public class DescripcionProducto extends javax.swing.JFrame {
                 txtAgregarDescripcionKeyTyped(evt);
             }
         });
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu Light", 1, 14)); // NOI18N
+        jLabel1.setText("MODIFICAR");
 
         javax.swing.GroupLayout pnDescripcionProductoLayout = new javax.swing.GroupLayout(pnDescripcionProducto);
         pnDescripcionProducto.setLayout(pnDescripcionProductoLayout);
@@ -159,15 +168,19 @@ public class DescripcionProducto extends javax.swing.JFrame {
                             .addComponent(lbDescripcion))
                         .addGap(89, 89, 89)
                         .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtAgregarNombre)
-                                .addComponent(txtAgregarCosto)
-                                .addComponent(cbAgregarTipo, 0, 219, Short.MAX_VALUE)
-                                .addComponent(txtAgregarProveedor)
-                                .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
-                                    .addComponent(txtAgregarStock)
-                                    .addGap(106, 106, 106)))
-                            .addComponent(txtAgregarDescripcion)))
+                            .addComponent(txtAgregarDescripcion)
+                            .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                                .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtAgregarNombre)
+                                        .addComponent(txtAgregarCosto)
+                                        .addComponent(cbAgregarTipo, 0, 219, Short.MAX_VALUE)
+                                        .addComponent(txtAgregarProveedor)
+                                        .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
+                                            .addComponent(txtAgregarStock)
+                                            .addGap(106, 106, 106)))
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnDescripcionProductoLayout.createSequentialGroup()
                         .addContainerGap(115, Short.MAX_VALUE)
                         .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,7 +193,9 @@ public class DescripcionProducto extends javax.swing.JFrame {
         pnDescripcionProductoLayout.setVerticalGroup(
             pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnDescripcionProductoLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(7, 7, 7)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addGroup(pnDescripcionProductoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbNombre)
                     .addComponent(txtAgregarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -337,6 +352,10 @@ public class DescripcionProducto extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_txtAgregarDescripcionKeyTyped
 
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAtrasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -378,6 +397,7 @@ public class DescripcionProducto extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JComboBox cbAgregarTipo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbCosto;
     private javax.swing.JLabel lbDescripcion;
     private javax.swing.JLabel lbNombre;
